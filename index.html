@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ViralFX | Destrave o CPM Global com IA</title>
-
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -28,8 +25,8 @@
                         brand: {
                             dark: '#050505',
                             card: '#111111',
-                            primary: '#0284c7', // Azul Metálico baseado no seu logo
-                            secondary: '#00d2ff', // Ciano brilhante baseado na seta do logo
+                            primary: '#0284c7', // Azul Metálico
+                            secondary: '#00d2ff', // Ciano brilhante
                         }
                     },
                     backgroundImage: {
@@ -48,12 +45,11 @@
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-
+        
         .glow-text {
             background: linear-gradient(to right, #38bdf8, #67e8f9);
             -webkit-background-clip: text;
@@ -67,14 +63,12 @@
             transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
             opacity: 0;
         }
-
         .faq-item.active .faq-answer {
             max-height: 500px;
             opacity: 1;
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
-
         .faq-item.active .faq-icon {
             transform: rotate(180deg);
         }
@@ -85,34 +79,26 @@
         }
     </style>
 </head>
-
 <body class="antialiased selection:bg-brand-primary selection:text-white relative overflow-x-hidden">
 
     <!-- Ambient Background Glow -->
     <div class="fixed inset-0 z-[-1] bg-gradient-glow pointer-events-none"></div>
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-brand-dark/80 border-b border-white/5"
-        id="navbar">
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-brand-dark/80 border-b border-white/5" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <img src="https://6u0ghjxrtaml3dtm.public.blob.vercel-storage.com/86956779786.png"
-                        alt="Viral FX Logo" class="h-14 w-auto mix-blend-screen object-contain">
+                    <img src="https://6u0ghjxrtaml3dtm.public.blob.vercel-storage.com/86956779786.png" alt="Viral FX Logo" class="h-14 w-auto mix-blend-screen object-contain">
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#oportunidade"
-                        class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Oportunidade</a>
-                    <a href="#solucoes"
-                        class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Soluções</a>
-                    <a href="#garantia"
-                        class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Garantias</a>
-                    <a href="#sobre" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Sobre
-                        Nós</a>
+                    <a href="#oportunidade" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Oportunidade</a>
+                    <a href="#solucoes" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Soluções</a>
+                    <a href="#garantia" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Garantias</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Sobre Nós</a>
                 </div>
                 <div class="hidden md:flex">
-                    <a href="#contato"
-                        class="bg-white text-black hover:bg-gray-200 px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] text-sm">
+                    <a href="#contato" class="bg-white text-black hover:bg-gray-200 px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] text-sm">
                         Agendar Análise
                     </a>
                 </div>
@@ -123,45 +109,34 @@
     <!-- 1. Hero Section -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <!-- Abstract graphics -->
-        <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/20 rounded-full blur-[120px] z-[-1]">
-        </div>
-
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/20 rounded-full blur-[120px] z-[-1]"></div>
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal">
-            <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-brand-secondary font-medium mb-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-brand-secondary font-medium mb-8">
                 <span class="relative flex h-3 w-3">
-                    <span
-                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-secondary opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-secondary"></span>
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-secondary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-secondary"></span>
                 </span>
                 A agência parceira dos maiores criadores do Brasil
             </div>
-
+            
             <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6">
-                Aumente o faturamento do seu canal em <span class="glow-text">até 20x</span> sem precisar gravar um
-                minuto a mais!
+                Aumente o faturamento do seu canal em <span class="glow-text">até 20x</span> sem precisar gravar um minuto a mais!
             </h1>
-
+            
             <p class="mt-4 text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-10">
-                Internacionalizamos o seu conteúdo com Inteligência Artificial e clonagem de voz perfeita. Destrave o
-                CPM global em Dólar e Euro com risco, custo e trabalho zero para você!
+                Internacionalizamos o seu conteúdo com Inteligência Artificial e clonagem de voz perfeita. Destrave o CPM global em Dólar e Euro com risco, custo e trabalho zero para você!
             </p>
-
+            
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contato"
-                    class="bg-gradient-brand text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] flex items-center justify-center gap-2">
+                <a href="#contato" class="bg-gradient-brand text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 hover:shadow-[0_0_30px_rgba(2,132,199,0.5)] flex items-center justify-center gap-2">
                     Agendar minha Análise Gratuita
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
 
             <!-- Stats/Trust indicators -->
-            <div
-                class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto opacity-70">
+            <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto opacity-70">
                 <div>
                     <div class="font-heading text-3xl font-bold text-white mb-1">+5 a 20x</div>
                     <div class="text-sm text-gray-400">Maior CPM (USD/EUR)</div>
@@ -188,27 +163,19 @@
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div>
                     <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                        O mundo já assiste o seu nicho! Só falta <span class="text-brand-secondary">entender a sua
-                            língua…</span>
+                        O mundo já assiste o seu nicho! Só falta <span class="text-brand-secondary">entender a sua língua…</span>
                     </h2>
                     <p class="text-lg text-gray-400 mb-6 leading-relaxed">
-                        O algoritmo do YouTube não tem fronteiras, mas o idioma tem. O público nos Estados Unidos,
-                        Europa e Ásia consome exatamente o mesmo estilo de conteúdo que você produz.
+                        O algoritmo do YouTube não tem fronteiras, mas o idioma tem. O público nos Estados Unidos, Europa e Ásia consome exatamente o mesmo estilo de conteúdo que você produz.
                     </p>
                     <div class="bg-red-500/10 border border-red-500/20 rounded-2xl p-6 relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-2xl"></div>
                         <h3 class="font-semibold text-white mb-2 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
-                                </path>
-                            </svg>
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                             O Detalhe que Custa Caro
                         </h3>
                         <p class="text-gray-300">
-                            O CPM (valor pago pelos anunciantes) lá fora é de <strong class="text-white">5 a 20 vezes
-                                MAIOR</strong> que o brasileiro. Enquanto você não dubla seus vídeos, outro criador
-                            estrangeiro está pegando as suas visualizações e os seus dólares!
+                            O CPM (valor pago pelos anunciantes) lá fora é de <strong class="text-white">5 a 20 vezes MAIOR</strong> que o brasileiro. Enquanto você não dubla seus vídeos, outro criador estrangeiro está pegando as suas visualizações e os seus dólares!
                         </p>
                     </div>
                 </div>
@@ -229,18 +196,12 @@
                                 <p class="text-2xl font-bold">1.000.000</p>
                                 <p class="text-sm text-brand-secondary font-bold">~ $15.000 (CPM $15.00)</p>
                             </div>
-                            <div class="h-40 w-8 bg-gradient-brand rounded-t-md shadow-[0_0_15px_rgba(6,182,212,0.5)]">
-                            </div>
+                            <div class="h-40 w-8 bg-gradient-brand rounded-t-md shadow-[0_0_15px_rgba(6,182,212,0.5)]"></div>
                         </div>
                         <!-- Decorative overlay -->
-                        <div
-                            class="absolute -right-6 -bottom-6 bg-brand-dark border border-white/10 p-4 rounded-xl shadow-xl flex items-center gap-3">
+                        <div class="absolute -right-6 -bottom-6 bg-brand-dark border border-white/10 p-4 rounded-xl shadow-xl flex items-center gap-3">
                             <div class="bg-green-500/20 p-2 rounded-full">
-                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                </svg>
+                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                             </div>
                             <div>
                                 <p class="text-xs text-gray-400">Potencial Perdido</p>
@@ -257,74 +218,45 @@
     <section id="solucoes" class="py-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">Tecnologia de ponta adaptada para a <span
-                        class="glow-text">sua estratégia!</span></h2>
-                <p class="text-gray-400 text-lg">Apresentamos duas frentes de atuação claras e profissionais. Não somos
-                    engessados, moldamos a tecnologia à necessidade do seu canal.</p>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">Tecnologia de ponta adaptada para a <span class="glow-text">sua estratégia!</span></h2>
+                <p class="text-gray-400 text-lg">Apresentamos duas frentes de atuação claras e profissionais. Não somos engessados, moldamos a tecnologia à necessidade do seu canal.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Card 1 -->
-                <div
-                    class="bg-brand-card border border-white/5 rounded-3xl p-8 hover:border-brand-primary/50 transition-all duration-300 hover:-translate-y-2 group reveal relative overflow-hidden">
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-[80px] group-hover:bg-brand-primary/20 transition-all">
+                <div class="bg-brand-card border border-white/5 rounded-3xl p-8 hover:border-brand-primary/50 transition-all duration-300 hover:-translate-y-2 group reveal relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-[80px] group-hover:bg-brand-primary/20 transition-all"></div>
+                    <div class="w-14 h-14 bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-6 border border-brand-primary/30">
+                        <svg class="w-7 h-7 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                     </div>
-                    <div
-                        class="w-14 h-14 bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-6 border border-brand-primary/30">
-                        <svg class="w-7 h-7 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-4 text-white">Múltiplas Faixas de Áudio <br><span
-                            class="text-sm font-normal text-gray-400">(No seu canal principal)</span></h3>
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-white">Múltiplas Faixas de Áudio <br><span class="text-sm font-normal text-gray-400">(No seu canal principal)</span></h3>
                     <div class="space-y-4">
                         <div>
-                            <p class="text-sm font-semibold text-brand-primary mb-1 uppercase tracking-wider">Como
-                                funciona</p>
-                            <p class="text-gray-400 leading-relaxed">Clonamos sua voz, mantemos sua energia, gritos e
-                                entonação, e traduzimos o roteiro com gírias nativas. Entregamos a faixa de áudio,
-                                thumbnail e títulos traduzidos e adaptados, prontos para você subir no próprio YouTube!
-                            </p>
+                            <p class="text-sm font-semibold text-brand-primary mb-1 uppercase tracking-wider">Como funciona</p>
+                            <p class="text-gray-400 leading-relaxed">Clonamos sua voz, mantemos sua energia, gritos e entonação, e traduzimos o roteiro com gírias nativas. Entregamos a faixa de áudio, thumbnail e títulos traduzidos e adaptados, prontos para você subir no próprio YouTube!</p>
                         </div>
                         <div>
                             <p class="text-sm font-semibold text-green-400 mb-1 uppercase tracking-wider">Vantagem</p>
-                            <p class="text-gray-300">Alcance global imediato, centralização de inscritos, monetização
-                                ativa desde o começo e zero necessidade de gerenciar novos canais.</p>
+                            <p class="text-gray-300">Alcance global imediato, centralização de inscritos, monetização ativa desde o começo e zero necessidade de gerenciar novos canais.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div
-                    class="bg-brand-card border border-white/5 rounded-3xl p-8 hover:border-brand-secondary/50 transition-all duration-300 hover:-translate-y-2 group reveal relative overflow-hidden delay-100">
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/10 rounded-full blur-[80px] group-hover:bg-brand-secondary/20 transition-all">
+                <div class="bg-brand-card border border-white/5 rounded-3xl p-8 hover:border-brand-secondary/50 transition-all duration-300 hover:-translate-y-2 group reveal relative overflow-hidden delay-100">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/10 rounded-full blur-[80px] group-hover:bg-brand-secondary/20 transition-all"></div>
+                    <div class="w-14 h-14 bg-brand-secondary/20 rounded-2xl flex items-center justify-center mb-6 border border-brand-secondary/30">
+                        <svg class="w-7 h-7 text-brand-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                     </div>
-                    <div
-                        class="w-14 h-14 bg-brand-secondary/20 rounded-2xl flex items-center justify-center mb-6 border border-brand-secondary/30">
-                        <svg class="w-7 h-7 text-brand-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-4 text-white">Canais Exclusivos com LipSync <br><span
-                            class="text-sm font-normal text-gray-400">(Dominação de Mercado)</span></h3>
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-white">Canais Exclusivos com LipSync <br><span class="text-sm font-normal text-gray-400">(Dominação de Mercado)</span></h3>
                     <div class="space-y-4">
                         <div>
-                            <p class="text-sm font-semibold text-brand-secondary mb-1 uppercase tracking-wider">Como
-                                funciona</p>
-                            <p class="text-gray-400 leading-relaxed">Criação de canais 100% dedicados a idiomas de alto
-                                valor (como Inglês, Espanhol ou Alemão). Adaptamos até mesmo a sincronia labial
-                                (LipSync) dos seus vídeos para uma imersão total do público estrangeiro!</p>
+                            <p class="text-sm font-semibold text-brand-secondary mb-1 uppercase tracking-wider">Como funciona</p>
+                            <p class="text-gray-400 leading-relaxed">Criação de canais 100% dedicados a idiomas de alto valor (como Inglês, Espanhol ou Alemão). Adaptamos até mesmo a sincronia labial (LipSync) dos seus vídeos para uma imersão total do público estrangeiro!</p>
                         </div>
                         <div>
                             <p class="text-sm font-semibold text-green-400 mb-1 uppercase tracking-wider">Vantagem</p>
-                            <p class="text-gray-300">Crescimento de uma comunidade nativa, SEO, otimização e
-                                publicidades focadas exclusivamente no país de destino.</p>
+                            <p class="text-gray-300">Crescimento de uma comunidade nativa, SEO, otimização e publicidades focadas exclusivamente no país de destino.</p>
                         </div>
                     </div>
                 </div>
@@ -336,106 +268,68 @@
     <section id="garantia" class="py-24 bg-[#0a0a0a] border-y border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">100% Transparência.<br><span
-                        class="text-gray-500">0% de Dor de Cabeça.</span></h2>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">100% Transparência.<br><span class="text-gray-500">0% de Dor de Cabeça.</span></h2>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
                 <!-- Item 1 -->
                 <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5">
                     <div class="bg-blue-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                            </path>
-                        </svg>
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
                     <h4 class="font-bold text-lg mb-2 text-white">A sua voz é sua</h4>
-                    <p class="text-sm text-gray-400">Contratos blindados de licença estrita. Nós usamos a sua voz
-                        exclusivamente para os seus vídeos oficiais.</p>
+                    <p class="text-sm text-gray-400">Contratos blindados de licença estrita. Nós usamos a sua voz exclusivamente para os seus vídeos oficiais.</p>
                 </div>
                 <!-- Item 2 -->
                 <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5">
                     <div class="bg-green-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                            </path>
-                        </svg>
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h4 class="font-bold text-lg mb-2 text-white">O Brasil continua seu</h4>
-                    <p class="text-sm text-gray-400">Não tocamos no seu faturamento do Brasil/Portugal. O RevShare
-                        acontece apenas sobre o dinheiro novo, gerado internacionalmente.</p>
+                    <p class="text-sm text-gray-400">Não tocamos no seu faturamento do Brasil/Portugal. O RevShare acontece apenas sobre o dinheiro novo, gerado internacionalmente.</p>
                 </div>
                 <!-- Item 3 -->
                 <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5">
                     <div class="bg-purple-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
-                            </path>
-                        </svg>
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                     </div>
                     <h4 class="font-bold text-lg mb-2 text-white">Analytics Transparente</h4>
-                    <p class="text-sm text-gray-400">Acompanhe os ganhos internacionais em tempo real, direto do seu
-                        próprio YouTube Studio. Sem planilhas obscuras!</p>
+                    <p class="text-sm text-gray-400">Acompanhe os ganhos internacionais em tempo real, direto do seu próprio YouTube Studio. Sem planilhas obscuras!</p>
                 </div>
                 <!-- Item 4 -->
                 <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5">
                     <div class="bg-yellow-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                        <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h4 class="font-bold text-lg mb-2 text-white">Operação Invisível</h4>
-                    <p class="text-sm text-gray-400">Você foca no roteiro e na gravação. Nós cuidamos de toda a
-                        tradução, adaptação de áudio e otimização!</p>
+                    <p class="text-sm text-gray-400">Você foca no roteiro e na gravação. Nós cuidamos de toda a tradução, adaptação de áudio e otimização!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Sobre Nós & Fundador -->
+    <!-- 5. Sobre Nós & Fundador (ATUALIZADO PARA MOBILE) -->
     <section id="sobre" class="py-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <div
-                class="bg-brand-card border border-white/5 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl">
+            <div class="bg-brand-card border border-white/5 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl">
                 <!-- Decorative BG -->
-                <div
-                    class="absolute -right-20 -bottom-20 w-96 h-96 bg-brand-primary/20 rounded-full blur-[100px] pointer-events-none">
-                </div>
-
+                <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-brand-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
+                
                 <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
                     <div>
-                        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Uma agência feita por quem <span
-                                class="glow-text">vive os bastidores</span> do YouTube.</h2>
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Uma agência feita por quem <span class="glow-text">vive os bastidores</span> do YouTube.</h2>
                         <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                            A Viral FX não é formada por engravatados que não entendem o algoritmo. Nós somos criadores
-                            de conteúdo e estrategistas digitais. Sabemos o peso da retenção, o timing de uma piada e a
-                            energia necessária para prender a atenção do público. Nós tratamos o seu canal com o mesmo
-                            cuidado cirúrgico que tratamos os nossos.
+                            A Viral FX não é formada por engravatados que não entendem o algoritmo. Nós somos criadores de conteúdo e estrategistas digitais. Sabemos o peso da retenção, o timing de uma piada e a energia necessária para prender a atenção do público. Nós tratamos o seu canal com o mesmo cuidado cirúrgico que tratamos os nossos.
                         </p>
 
                         <div class="bg-[#050505] rounded-2xl p-6 border border-white/5 relative">
-                            <svg class="absolute top-4 left-4 w-8 h-8 text-white/10" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                            </svg>
-                            <p class="text-gray-300 italic relative z-10 pl-10 mb-6">
-                                "Minha história com os games começou aos 3 anos de idade. De pro-player e streamer
-                                profissional a criador de conteúdo no YouTube, eu já vivi e ainda vivo os bastidores e a
-                                dinâmica desse mercado na pele todos os dias.<br><br>
-                                A Viral FX nasceu porque vi canais enormes, com conteúdo excelente, deixando milhões na
-                                mesa por causa da barreira do idioma. Nossa missão não é apenas traduzir o seu vídeo de
-                                forma robótica, mas sim levar o seu conteúdo para o mercado global, mantendo a
-                                autenticidade que os seus inscritos já amam."
+                            <svg class="absolute top-4 left-4 w-8 h-8 text-white/10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                            <p class="text-gray-300 italic relative z-10 pl-10 mb-6 text-sm sm:text-base">
+                                "Minha história com os games começou aos 3 anos de idade. De pro-player e streamer profissional a criador de conteúdo no YouTube, eu já vivi e ainda vivo os bastidores e a dinâmica desse mercado na pele todos os dias.<br><br>
+                                A Viral FX nasceu porque vi canais enormes, com conteúdo excelente, deixando milhões na mesa por causa da barreira do idioma. Nossa missão não é apenas traduzir o seu vídeo de forma robótica, mas sim levar o seu conteúdo para o mercado global, mantendo a autenticidade que os seus inscritos já amam."
                             </p>
                             <div class="flex items-center gap-4 pl-10">
-                                <div
-                                    class="w-12 h-12 bg-gradient-brand rounded-full flex items-center justify-center font-bold text-lg">
-                                    FS</div>
+                                <div class="w-12 h-12 bg-gradient-brand rounded-full flex items-center justify-center font-bold text-lg text-white">FS</div>
                                 <div>
                                     <p class="font-bold text-white">Fábio Saraiva</p>
                                     <p class="text-sm text-brand-secondary">Fundador e CEO da Viral FX</p>
@@ -443,26 +337,21 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="hidden lg:block relative">
-                        <div class="aspect-[4/5] rounded-3xl overflow-hidden relative">
-                            <!-- Placeholder for Founder Image. In production, replace src with actual image -->
-                            <img src="https://6u0ghjxrtaml3dtm.public.blob.vercel-storage.com/647553464.jpg"
-                                alt="Profissional de Bastidores"
-                                class="object-cover w-full h-full opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent">
-                            </div>
+                    
+                    <!-- FOTO - Agora visível no mobile com tamanho ajustado -->
+                    <div class="relative w-full max-w-sm mx-auto lg:max-w-none mt-4 lg:mt-0">
+                        <div class="aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden relative">
+                            <!-- Dica: Coloque a sua foto real substituindo este link do unsplash -->
+                            <img src="https://6u0ghjxrtaml3dtm.public.blob.vercel-storage.com/647553464.jpg" alt="Fábio Saraiva - CEO" class="object-cover w-full h-full opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent"></div>
                         </div>
-                        <!-- Floating badge -->
-                        <div
-                            class="absolute -bottom-6 -left-6 bg-white text-black p-4 rounded-xl shadow-2xl flex items-center gap-3">
+                        <!-- Floating badge ajustado para não quebrar a tela no celular -->
+                        <div class="absolute -bottom-4 -left-2 sm:-left-6 lg:-bottom-6 bg-white text-black p-3 lg:p-4 rounded-xl shadow-2xl flex items-center gap-2 lg:gap-3 z-20">
                             <span class="relative flex h-3 w-3">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                             </span>
-                            <span class="font-bold text-sm">Especialistas em Retenção</span>
+                            <span class="font-bold text-xs sm:text-sm">Especialistas em Retenção</span>
                         </div>
                     </div>
                 </div>
@@ -475,114 +364,62 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
                 <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Perguntas Frequentes</h2>
-                <p class="text-gray-400">Tiramos todas as suas dúvidas para você dar o próximo passo com total
-                    segurança.</p>
+                <p class="text-gray-400">Tiramos todas as suas dúvidas para você dar o próximo passo com total segurança.</p>
             </div>
 
             <div class="space-y-4">
                 <!-- FAQ 1 -->
-                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div
-                        class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
-                        <h3 class="font-semibold text-white pr-8 text-lg">A dublagem com IA não fica com "voz de robô"?
-                        </h3>
-                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
+                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <h3 class="font-semibold text-white pr-8 text-lg">A dublagem com IA não fica com "voz de robô"?</h3>
+                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer px-6 bg-brand-card">
-                        <p class="text-gray-400 pb-2">De forma alguma. Nossa tecnologia de clonagem de voz captura não
-                            apenas o seu timbre, mas a sua energia, suas pausas, respirações e até as suas ironias. O
-                            resultado é tão natural que o público internacional sente a mesma imersão que a sua
-                            audiência brasileira.</p>
+                        <p class="text-gray-400 pb-2">De forma alguma. Nossa tecnologia de clonagem de voz captura não apenas o seu timbre, mas a sua energia, suas pausas, respirações e até as suas ironias. O resultado é tão natural que o público internacional sente a mesma imersão que a sua audiência brasileira.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div
-                        class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
-                        <h3 class="font-semibold text-white pr-8 text-lg">Isso vai prejudicar o desempenho do meu canal
-                            no Brasil?</h3>
-                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
+                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <h3 class="font-semibold text-white pr-8 text-lg">Isso vai prejudicar o desempenho do meu canal no Brasil?</h3>
+                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer px-6 bg-brand-card">
-                        <p class="text-gray-400 pb-2">Não. O formato de Múltiplas Faixas de Áudio é uma ferramenta
-                            oficial do YouTube desenhada exatamente para não canibalizar o seu público. O algoritmo
-                            entrega o áudio em português para quem está no Brasil, e o áudio dublado automaticamente
-                            para quem está nos EUA ou na Europa. Seu público nacional nem percebe a diferença.</p>
+                        <p class="text-gray-400 pb-2">Não. O formato de Múltiplas Faixas de Áudio é uma ferramenta oficial do YouTube desenhada exatamente para não canibalizar o seu público. O algoritmo entrega o áudio em português para quem está no Brasil, e o áudio dublado automaticamente para quem está nos EUA ou na Europa. Seu público nacional nem percebe a diferença.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div
-                        class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
-                        <h3 class="font-semibold text-white pr-8 text-lg">Terei que assinar exclusividade ou abrir mão
-                            dos direitos do meu canal?</h3>
-                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
+                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <h3 class="font-semibold text-white pr-8 text-lg">Terei que assinar exclusividade ou abrir mão dos direitos do meu canal?</h3>
+                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer px-6 bg-brand-card">
-                        <p class="text-gray-400 pb-2">Jamais. O seu canal e a sua voz são propriedades intelectuais 100%
-                            suas. Nosso contrato prevê apenas uma licença estrita e temporária para usarmos sua voz
-                            exclusivamente na adaptação dos seus próprios vídeos. A Viral FX entra como uma parceira de
-                            performance, não como dona do seu conteúdo.</p>
+                        <p class="text-gray-400 pb-2">Jamais. O seu canal e a sua voz são propriedades intelectuais 100% suas. Nosso contrato prevê apenas uma licença estrita e temporária para usarmos sua voz exclusivamente na adaptação dos seus próprios vídeos. A Viral FX entra como uma parceira de performance, não como dona do seu conteúdo.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 4 -->
-                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div
-                        class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
-                        <h3 class="font-semibold text-white pr-8 text-lg">Como funciona a divisão do dinheiro e como eu
-                            recebo?</h3>
-                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
+                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <h3 class="font-semibold text-white pr-8 text-lg">Como funciona a divisão do dinheiro e como eu recebo?</h3>
+                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer px-6 bg-brand-card">
-                        <p class="text-gray-400 pb-2">Nós operamos no modelo de RevShare (divisão de receita) apenas
-                            sobre o faturamento internacional (Dólar/Euro). A sua receita brasileira continua 100%
-                            intocada. Você acompanha os ganhos da gringa em tempo real pelo seu próprio YouTube Studio
-                            (Geografia do Espectador) e o pagamento cai direto na sua conta do AdSense, garantindo
-                            transparência total.</p>
+                        <p class="text-gray-400 pb-2">Nós operamos no modelo de RevShare (divisão de receita) apenas sobre o faturamento internacional (Dólar/Euro). A sua receita brasileira continua 100% intocada. Você acompanha os ganhos da gringa em tempo real pelo seu próprio YouTube Studio (Geografia do Espectador) e o pagamento cai direto na sua conta do AdSense, garantindo transparência total.</p>
                     </div>
                 </div>
 
                 <!-- FAQ 5 -->
-                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div
-                        class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
-                        <h3 class="font-semibold text-white pr-8 text-lg">Vou ter mais trabalho no meu dia a dia de
-                            gravação?</h3>
-                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
+                <div class="faq-item bg-brand-card border border-white/5 rounded-2xl overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="px-6 py-5 flex justify-between items-center bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <h3 class="font-semibold text-white pr-8 text-lg">Vou ter mais trabalho no meu dia a dia de gravação?</h3>
+                        <svg class="faq-icon w-5 h-5 text-brand-primary transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
                     <div class="faq-answer px-6 bg-brand-card">
-                        <p class="text-gray-400 pb-2">Seu trabalho extra será de exatamente um minuto. Você continua
-                            criando seus roteiros e vídeos como sempre fez. Nós assumimos toda a engenharia da clonagem,
-                            tradução, adaptação de gírias e edição de áudio. Te entregamos a faixa finalizada e você
-                            apenas faz o upload junto com o seu vídeo original.</p>
+                        <p class="text-gray-400 pb-2">Seu trabalho extra será de exatamente um minuto. Você continua criando seus roteiros e vídeos como sempre fez. Nós assumimos toda a engenharia da clonagem, tradução, adaptação de gírias e edição de áudio. Te entregamos a faixa finalizada e você apenas faz o upload junto com o seu vídeo original.</p>
                     </div>
                 </div>
             </div>
@@ -593,25 +430,18 @@
     <section id="contato" class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-brand-primary/5"></div>
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-1 bg-gradient-brand blur-sm"></div>
-
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
-            <div
-                class="bg-brand-card border border-white/10 rounded-3xl p-8 md:p-16 shadow-[0_0_50px_rgba(139,92,246,0.1)]">
+            <div class="bg-brand-card border border-white/10 rounded-3xl p-8 md:p-16 shadow-[0_0_50px_rgba(2,132,199,0.1)]">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">Pronto para
-                            destrancar a <span class="text-brand-primary">monetização global?</span></h2>
+                        <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">Pronto para destrancar a <span class="text-brand-primary">monetização global?</span></h2>
                         <p class="text-gray-400 text-lg mb-8">
-                            Preencha os dados abaixo e vamos agendar um bate-papo rápido de 15 minutos. Vamos abrir a
-                            tela e te mostrar na prática como a sua voz vai soar em Inglês, Francês ou Japonês.
+                            Preencha os dados abaixo e vamos agendar um bate-papo rápido de 15 minutos. Vamos abrir a tela e te mostrar na prática como a sua voz vai soar em Inglês, Francês ou Japonês.
                         </p>
-
+                        
                         <div class="flex items-center gap-4 text-sm text-gray-400 mt-8">
-                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
-                                </path>
-                            </svg>
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                             Seus dados estão 100% seguros com a gente.
                         </div>
                     </div>
@@ -621,43 +451,28 @@
                         <form id="leadForm" class="space-y-4" onsubmit="submitForm(event)">
                             <div>
                                 <label class="block text-sm font-medium text-gray-400 mb-1">Seu Nome / Apelido</label>
-                                <input type="text" required
-                                    class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors"
-                                    placeholder="Como gosta de ser chamado?">
+                                <input type="text" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="Como gosta de ser chamado?">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-400 mb-1">Link do Canal</label>
-                                <input type="url" required
-                                    class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors"
-                                    placeholder="https://youtube.com/@seucanal">
+                                <input type="url" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="https://youtube.com/@seucanal">
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-400 mb-1">WhatsApp</label>
-                                    <input type="tel" required
-                                        class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors"
-                                        placeholder="(00) 00000-0000">
+                                    <input type="tel" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="(00) 00000-0000">
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium text-gray-400 mb-1">E-mail
-                                        Profissional</label>
-                                    <input type="email" required
-                                        class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors"
-                                        placeholder="contato@seucanal.com">
+                                    <label class="block text-sm font-medium text-gray-400 mb-1">E-mail Profissional</label>
+                                    <input type="email" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="contato@seucanal.com">
                                 </div>
                             </div>
-                            <button type="submit"
-                                class="w-full bg-white text-black font-bold text-lg rounded-lg px-4 py-4 mt-4 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group">
+                            <button type="submit" class="w-full bg-white text-black font-bold text-lg rounded-lg px-4 py-4 mt-4 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group">
                                 Agendar Minha Call Gratuita
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </button>
-                            <div id="successMsg"
-                                class="hidden mt-4 p-3 bg-green-500/20 text-green-400 rounded-lg text-center text-sm font-medium">
-                                Pedido enviado com sucesso! Nossa equipe entrará em contato via WhatsApp em breve.
+                            <div id="successMsg" class="hidden mt-4 p-3 bg-green-500/20 text-green-400 rounded-lg text-center text-sm font-medium">
+                                Pedido enviado com sucesso! Nossa equipa entrará em contacto via WhatsApp em breve.
                             </div>
                         </form>
                     </div>
@@ -666,11 +481,11 @@
         </div>
     </section>
 
-    <!-- Footer Simple -->
+    <!-- Footer Simple (ATUALIZADO COM O LOGÓTIPO MAIOR) -->
     <footer class="border-t border-white/10 bg-[#050505] py-6 text-center">
         <div class="flex items-center justify-center mb-2">
-            <img src="https://6u0ghjxrtaml3dtm.public.blob.vercel-storage.com/86956779786.png" alt="Viral FX Logo"
-                class="h-32 md:h-40 w-auto mix-blend-screen object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <!-- Certifica-te de que a imagem "Logo Viral FX.jpg" está na mesma pasta no GitHub -->
+            <img src="https://6u0ghjxrtaml3dtm.public.blob.vercel-storage.com/86956779786.png" alt="Viral FX Logo" class="h-32 md:h-40 w-auto mix-blend-screen object-contain opacity-70 hover:opacity-100 transition-opacity duration-300">
         </div>
         <p class="text-gray-500 text-sm">© 2026 Viral FX. Todos os direitos reservados.</p>
     </footer>
@@ -694,7 +509,7 @@
             // Close all other items
             const allItems = document.querySelectorAll('.faq-item');
             allItems.forEach(item => {
-                if (item !== element && item.classList.contains('active')) {
+                if(item !== element && item.classList.contains('active')) {
                     item.classList.remove('active');
                 }
             });
@@ -707,7 +522,7 @@
             e.preventDefault();
             const btn = e.target.querySelector('button[type="submit"]');
             const msg = document.getElementById('successMsg');
-
+            
             btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-black inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processando...';
             btn.disabled = true;
 
@@ -742,5 +557,4 @@
         });
     </script>
 </body>
-
 </html>
