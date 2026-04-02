@@ -449,22 +449,26 @@
                     <!-- Form -->
                     <div class="bg-[#050505] p-8 rounded-2xl border border-white/5">
                         <form id="leadForm" class="space-y-4" onsubmit="submitForm(event)">
+                            <!-- Configurações ocultas do FormSubmit -->
+                            <input type="hidden" name="_subject" value="Novo Lead - Landing Page ViralFX">
+                            <input type="hidden" name="_captcha" value="false">
+                            
                             <div>
                                 <label class="block text-sm font-medium text-gray-400 mb-1">Seu Nome / Apelido</label>
-                                <input type="text" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="Como gosta de ser chamado?">
+                                <input type="text" name="Nome" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="Como gosta de ser chamado?">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-400 mb-1">Link do Canal</label>
-                                <input type="url" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="https://youtube.com/@seucanal">
+                                <input type="url" name="Canal" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="https://youtube.com/@seucanal">
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-400 mb-1">WhatsApp</label>
-                                    <input type="tel" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="(00) 00000-0000">
+                                    <input type="tel" name="WhatsApp" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="(00) 00000-0000">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-400 mb-1">E-mail Profissional</label>
-                                    <input type="email" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="contato@seucanal.com">
+                                    <input type="email" name="Email" required class="w-full bg-brand-card border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors" placeholder="contato@seucanal.com">
                                 </div>
                             </div>
                             <button type="submit" class="w-full bg-white text-black font-bold text-lg rounded-lg px-4 py-4 mt-4 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group">
@@ -472,7 +476,7 @@
                                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </button>
                             <div id="successMsg" class="hidden mt-4 p-3 bg-green-500/20 text-green-400 rounded-lg text-center text-sm font-medium">
-                                Pedido enviado com sucesso! Nossa equipa entrará em contacto via WhatsApp em breve.
+                                Pedido enviado com sucesso! Nossa equipe entrará em contato via WhatsApp em breve.
                             </div>
                         </form>
                     </div>
@@ -517,23 +521,42 @@
             element.classList.toggle('active');
         }
 
-        // Form Submit Simulation
+              // Envio Real do Formulário para o Email
         function submitForm(e) {
             e.preventDefault();
-            const btn = e.target.querySelector('button[type="submit"]');
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
             const msg = document.getElementById('successMsg');
             
             btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-black inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processando...';
             btn.disabled = true;
 
-            // Simulate API call
-            setTimeout(() => {
-                e.target.reset();
+            // Coleta os dados digitados
+            const formData = new FormData(form);
+
+            // Envia para o FormSubmit em background (AJAX)
+            fetch("https://formsubmit.co/ajax/contato@viralfx.com.br", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Sucesso
+                form.reset();
                 btn.innerHTML = 'Agendar Minha Call Gratuita';
                 btn.disabled = false;
                 msg.classList.remove('hidden');
-                setTimeout(() => msg.classList.add('hidden'), 5000);
-            }, 1500);
+                setTimeout(() => msg.classList.add('hidden'), 6000);
+            })
+            .catch(error => {
+                // Erro
+                console.error('Erro:', error);
+                btn.innerHTML = 'Erro de conexão. Tente novamente';
+                btn.disabled = false;
+                setTimeout(() => {
+                    btn.innerHTML = 'Agendar Minha Call Gratuita';
+                }, 3000);
+            });
         }
 
         // Intersection Observer for scroll animations
